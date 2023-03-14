@@ -1,0 +1,35 @@
+<p>home works!</p>
+<table class="table table-striped table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>id mov</th>
+            <th>Fecha de mov</th>
+            <th>Tipo de mov</th>
+            <th>Ingreso cantidad</th>
+            <th>Ingreso precio unitario</th>
+            <th>Ingreso total</th>
+            <th>Egreso cantidad</th>
+            <th>Egreso precio unitario</th>
+            <th>Egreso total</th>
+            <th>Existente cantidad</th>
+            <th>Existente precio unitario</th>
+            <th>Existente total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productos; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.date }}</td>
+            <td>{{ product.movement }}</td>
+            <td>{{ product.inFlowDto.inflowInventaryQty }}</td>
+            <td>{{ product.inFlowDto.inflowUnitPrice }}</td>
+            <td>{{ product.inFlowDto.inflowTotalPrice }}</td>
+            <td>{{ product.outFlowDto.outflowInventaryQty }}</td>
+            <td>{{ product.outFlowDto.outflowUnitPrice }}</td>
+            <td>{{ product.outFlowDto.outflowTotalPrice }}</td>
+            <td>{{ product.existDto.existInventaryQty }}</td>
+            <td>{{ product.existDto.existUnitPrice }}</td>
+            <td>{{ product.existDto.existTotalPrice }}</td>
+        </tr>
+    </tbody>
+</table>

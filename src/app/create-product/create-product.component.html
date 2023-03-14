@@ -1,0 +1,21 @@
+
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+    <label for="product-name">Nombre del producto: </label>
+    <input id="product-name" type="text" formControlName="productName">
+    <br>
+    <label for="product-image">Imagen: </label>
+    <input id="product-image" type="text" formControlName="productImage">
+    <br>
+    <label for="initial-inventary">Inventario inicial: </label>
+    <input id="initial-inventary" type="text" formControlName="existInventaryQty">
+    <br>
+    <label for="initial-unitary-price">Precio unitario: </label>
+    <input id="initial-unitary-price" type="text" formControlName="existUnitPrice">
+    <br>
+    <p>Enviar</p>
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+  </form>
+

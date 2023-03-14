@@ -1,0 +1,14 @@
+
+
+<form [formGroup]="addInventaryForm" (ngSubmit)="onSubmit()">
+
+    <label for="inflow-inventary">Inventario de entrada: </label>
+    <input id="inflow-inventary" type="number" formControlName="inflowInventaryQty">
+    <br>
+    <label for="inflow-unit-price">Precio unitario de entrada: </label>
+    <input id="inflow-unit-price" type="number" formControlName="inflowUnitPrice">
+    <br>
+    <p>Enviar</p>
+<button type="submit" [disabled]="!addInventaryForm.valid">Submit</button>
+
+</form>
